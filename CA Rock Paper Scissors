@@ -1,0 +1,51 @@
+const getUserChoice = userInput => {
+  userInput = userInput.toLowerCase();
+  if (userInput === 'rock' || userInput === 'paper'
+  || userInput === 'scrissors') {
+    return userInput
+  } else {
+    console.log('Error')
+  };
+};
+
+const getComputerChoice = function choice() {
+  randomNumber = Math.floor(Math.random()*3);
+  if (randomNumber === 0) {
+    return 'rock'
+  } else if (randomNumber === 1) {
+    return 'paper'
+  } else if (randomNumber === 2) {
+    return 'scissors'
+  };
+};
+
+const determineWinner = (userChoice, computerChoice) => {
+  if (userChoice === computerChoice) {
+    return 'game tie'
+  };
+  if (userChoice === 'rock' && computerChoice ===
+  'paper') {
+    return 'computer wins'
+  } else if (userChoice === 'rock' && computerChoice === 'scissors'){
+    return 'user wins'
+  } else if (userChoice === 'paper' && computerChoice === 'rock') {
+    return 'user wins'
+  } else if (userChoice === 'paper' && computerChoice === 'scissors') {
+    return 'computer wins'
+  } else if (userChoice === 'scissors' && computerChoice === 'paper') {
+    return 'user wins'
+  } else if (userChoice === 'scissors' && computerChoice === 'rock') {
+    return 'computer wins'
+  };
+};
+
+const playGame = () => {
+  userChoice = getUserChoice('rock');
+  console.log(userChoice);
+  computerChoice = getComputerChoice();
+  console.log(computerChoice);
+  console.log(determineWinner(userChoice, computerChoice));
+  };
+
+
+playGame();
