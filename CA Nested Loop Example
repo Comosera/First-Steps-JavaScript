@@ -1,0 +1,14 @@
+var bobsFollowers = ['Kevin','Paulina','Garden','Ricky'];
+var tinasFollowers = ['Kevin','Paulina','Joaquin'];
+var mutualFollowers = [];
+
+for (let i = 0; i< bobsFollowers.length; i++){
+  for (let j = 0; j< tinasFollowers.length;j++){
+    if (bobsFollowers[i]===tinasFollowers[j]) {
+      mutualFollowers.push(bobsFollowers[i]);
+    }
+  }
+}
+console.log(mutualFollowers)
+
+//appending mutual strings into mutualFollowers
