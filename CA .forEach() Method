@@ -1,0 +1,7 @@
+const fruits = ['mango', 'papaya', 'pineapple', 'apple'];
+
+// Iterate over fruits below
+fruits.forEach(fruit => console.log('I want to eat a ' + fruit))
+
+//original array . forEach ( new var => console.log( ... + new var ) 
+// saves lines compared to a for loop perhaps?
