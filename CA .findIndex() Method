@@ -1,0 +1,12 @@
+const animals = ['hippo', 'tiger', 'lion', 'seal', 'cheetah', 'monkey', 'salamander', 'elephant'];
+
+const foundAnimal = animals.findIndex(animal => {
+  return console.log(animal === 'elephant');
+})
+
+const startsWithS = animals.findIndex(letter => {
+  return console.log(letter[0] === 's');
+})
+
+
+// returns true or false outputs.
